@@ -1,14 +1,27 @@
 {
-  "name": "flaky-fireball",
+  "name": "nbcc-website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "dev:tina": "tinacms dev -c \"astro dev\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.8.0"
+    "@astrojs/react": "^4.3.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "@tinacms/cli": "^1.9.7",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "astro": "^5.8.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.7",
+    "tinacms": "^2.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21"
   }
 }

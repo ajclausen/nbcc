@@ -1,47 +1,115 @@
-# Astro Starter Kit: Minimal
+# New Brunswick Church of Christ Website
 
-```sh
-npm create astro@latest -- --template minimal
+## Project Overview
+
+A modern, elegant church website built for New Brunswick Church of Christ (NBCC) in Lebanon, Indiana. This project creates a fresh, timeless design that effectively communicates the church's mission, services, and community programs while providing an intuitive experience for both new guests and long-time members.
+
+## Church Information
+
+- **Founded**: 1856
+- **Location**: 6480 South State Road 39, Lebanon, IN
+- **Contact**: office@nbcc-church.org | 765-482-5265
+- **Motto**: "Love God, Love Others, Share Truth"
+- **Type**: Independent, non-denominational Christian Church
+
+## Technology Stack
+
+- **Static Site Generator**: Astro 4.x
+- **Content Management**: Tina CMS
+- **Styling**: Tailwind CSS + custom design system
+- **Version Control**: GitHub
+- **Deployment**: Cloudflare Pages
+- **Additional**: TypeScript, React components where needed
+
+## Key Requirements
+
+### Design & UX
+- ✅ Modern, elegant, clean design
+- ✅ Timeless and fresh styling
+- ✅ Best UI/UX practices
+- ✅ Mobile-first responsive design
+- ✅ Intuitive navigation
+- ✅ Fast loading times
+- ✅ Accessibility compliant
+
+### Content & Features
+- ✅ Service times and schedules
+- ✅ Event information and calendar
+- ✅ Ministry and program details
+- ✅ Leadership team profiles
+- ✅ Church history and mission
+- ✅ Contact information and location
+- ✅ Video sermon integration
+- ✅ Prayer request form
+- ✅ Giving/donation information
+- ✅ Volunteer opportunities
+
+### Technical
+- ✅ SEO optimized
+- ✅ Fast performance scores
+- ✅ CMS integration for easy content updates
+- ✅ GitHub workflow integration
+- ✅ Automated Cloudflare Pages deployment
+
+## Service Schedule
+
+- **Sunday School**: 9:00 AM
+- **Main Service**: 10:00 AM
+- **Kids Church**: 10:20 AM (after communion)
+- **Midweek Prayer**: Wednesdays 7:00 PM
+
+## Key Programs & Ministries
+
+- Youth Group
+- Kids Church & VBS
+- Bible Bowl
+- Food Pantry
+- Missions
+- Trail Life & American Heritage Girls
+- NBCC Scholarship Fund
+
+## Development Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Content Management
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The website uses Tina CMS for content management, allowing church staff to easily update:
+- Page content
+- Event listings
+- Sermon information
+- Staff profiles
+- News and announcements
 
-## 🚀 Project Structure
+## Deployment
 
-Inside of your Astro project, you'll see the following folders and files:
+The site automatically deploys to Cloudflare Pages when changes are pushed to the main branch on GitHub.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Design Philosophy
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+The design emphasizes:
+- **Warmth & Welcome**: Inviting colors and imagery that make visitors feel at home
+- **Clarity**: Clear information hierarchy and easy-to-find essential details
+- **Community**: Showcasing the church's active community and programs
+- **Accessibility**: Ensuring all visitors can access and navigate the content
+- **Mobile Experience**: Optimized for mobile devices where many visitors will first encounter the site
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Future Enhancements
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Online giving integration
+- Member portal
+- Event registration system
+- Live streaming integration
+- Mobile app consideration

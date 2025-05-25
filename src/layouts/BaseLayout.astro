@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "New Brunswick Church of Christ - Love God, Love Others, Share Truth" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | NBCC</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "New Brunswick Church of Christ",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6480 South State Road 39",
+          "addressLocality": "Lebanon",
+          "addressRegion": "IN",
+          "addressCountry": "US"
+        },
+        "telephone": "765-482-5265",
+        "email": "office@nbcc-church.org",
+        "url": "https://nbcc-church.org",
+        "foundingDate": "1856",
+        "description": "Independent, non-denominational Christian Church serving Lebanon, Indiana since 1856"
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <img src="/logos/Logo.jpg" alt="NBCC Logo" class="h-12 w-auto" />
+            <div>
+              <h1 class="text-xl font-bold text-gray-900">NBCC</h1>
+              <p class="text-xs text-gray-600">Est. 1856</p>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+            <a href="/about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+            <a href="/services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+            <a href="/ministries" class="text-gray-700 hover:text-blue-600 transition-colors">Ministries</a>
+            <a href="/events" class="text-gray-700 hover:text-blue-600 transition-colors">Events</a>
+            <a href="/contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Church Info -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-xl font-bold mb-4">New Brunswick Church of Christ</h3>
+            <p class="text-gray-300 mb-4">Love God, Love Others, Share Truth</p>
+            <div class="space-y-2 text-gray-300">
+              <p>6480 South State Road 39</p>
+              <p>Lebanon, IN 46052</p>
+              <p>Phone: (765) 482-5265</p>
+              <p>Email: office@nbcc-church.org</p>
+            </div>
+          </div>
+          
+          <!-- Service Times -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Service Times</h4>
+            <div class="space-y-2 text-gray-300">
+              <p>Sunday School: 9:00 AM</p>
+              <p>Main Service: 10:00 AM</p>
+              <p>Kids Church: 10:20 AM</p>
+              <p>Wednesday Prayer: 7:00 PM</p>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <div class="space-y-2">
+              <a href="/give" class="block text-gray-300 hover:text-white transition-colors">Give</a>
+              <a href="/prayer-request" class="block text-gray-300 hover:text-white transition-colors">Prayer Request</a>
+              <a href="/volunteer" class="block text-gray-300 hover:text-white transition-colors">Volunteer</a>
+              <a href="/video-sermons" class="block text-gray-300 hover:text-white transition-colors">Video Sermons</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 New Brunswick Church of Christ. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
+</html> 

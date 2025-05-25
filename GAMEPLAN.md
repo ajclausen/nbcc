@@ -5,7 +5,7 @@
 - [x] Configure Tailwind CSS and design system
 - [x] Set up project structure and folders
 - [x] Configure Tina CMS
-- [ ] Set up GitHub repository
+- [x] Set up GitHub repository
 - [ ] Configure Cloudflare Pages deployment
 - [x] Create base layout and design components
 
@@ -20,7 +20,7 @@
 
 ## Phase 3: Core Pages Development
 - [x] Homepage - welcoming hero, services overview, quick info
-- [ ] About page - church history, mission, vision
+- [x] About page - church history, mission, vision
 - [ ] Services page - detailed schedule and service info
 - [ ] Leadership page - staff profiles and leadership team
 - [ ] Contact page - location, hours, contact form

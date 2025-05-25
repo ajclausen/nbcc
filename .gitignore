@@ -1,26 +1,140 @@
-# build output
+# Build output
 dist/
-# generated types
 .astro/
+.vercel/
+.netlify/
 
-# dependencies
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
 
-# logs
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-
-# environment variables
+# Environment variables
 .env
-.env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
-# macOS-specific files
-.DS_Store
-
-# jetbrains setting folder
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
 .idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-node_modules
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.cache/
+tmp/
+temp/
+
+# TinaCMS
+.tina/__generated__/
+tina/__generated__/
+
+# Package manager files (we use npm, so keeping package-lock.json)
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# parcel-bundler cache
+.parcel-cache
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt.js build / generate output
+.nuxt/
+
+# Gatsby files (not applicable to this project)
+# .cache/
+# public/
+
+# VuePress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# Temporary folders
+tmp/
+temp/
+
+# Backup files
+*.backup
+*.bak
+

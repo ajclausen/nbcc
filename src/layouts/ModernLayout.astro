@@ -1,0 +1,143 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "New Brunswick Church of Christ - A modern community of faith in Lebanon, Indiana" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "New Brunswick Church of Christ",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6480 South State Road 39",
+          "addressLocality": "Lebanon",
+          "addressRegion": "IN",
+          "addressCountry": "US"
+        },
+        "telephone": "765-482-5265",
+        "email": "office@nbcc-church.org",
+        "url": "https://nbcc-church.org"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Modern Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <a href="/" class="flex items-center space-x-3">
+            <img src="/logos/Logo.jpg" alt="NBCC" class="h-12 w-auto" />
+            <div>
+              <h1 class="text-xl font-bold text-gray-900">NBCC</h1>
+              <p class="text-xs text-gray-600">Est. 1856</p>
+            </div>
+          </a>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+            <a href="/about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
+            <a href="/services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Visit</a>
+            <a href="/ministries" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Ministries</a>
+            <a href="/events" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Events</a>
+            <a href="/give" class="btn-primary">Give</a>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Modern Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Church Info -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4">New Brunswick Church of Christ</h3>
+            <p class="text-gray-400 mb-6">Love God • Love Others • Share Truth</p>
+            <div class="space-y-2 text-gray-300">
+              <p>6480 South State Road 39</p>
+              <p>Lebanon, IN 46052</p>
+              <p class="mt-4">
+                <a href="tel:7654825265" class="hover:text-white transition-colors">(765) 482-5265</a>
+              </p>
+              <p>
+                <a href="mailto:office@nbcc-church.org" class="hover:text-white transition-colors">office@nbcc-church.org</a>
+              </p>
+            </div>
+          </div>
+          
+          <!-- Service Times -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Service Times</h4>
+            <div class="space-y-3 text-gray-300">
+              <div>
+                <p class="font-medium text-white">Sunday</p>
+                <p>Bible Study: 9:00 AM</p>
+                <p>Worship: 10:00 AM</p>
+              </div>
+              <div>
+                <p class="font-medium text-white">Wednesday</p>
+                <p>Prayer Service: 7:00 PM</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Connect</h4>
+            <div class="space-y-2">
+              <a href="/about" class="block text-gray-300 hover:text-white transition-colors">About Us</a>
+              <a href="/contact" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="/prayer-request" class="block text-gray-300 hover:text-white transition-colors">Prayer Request</a>
+              <a href="/give" class="block text-gray-300 hover:text-white transition-colors">Give Online</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+          <p>&copy; 2024 New Brunswick Church of Christ. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

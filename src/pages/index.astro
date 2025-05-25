@@ -1,180 +1,203 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ModernLayout from '../layouts/ModernLayout.astro';
+import ModernHero from '../components/sections/ModernHero.tsx';
+import ModernServiceTimes from '../components/sections/ModernServiceTimes.tsx';
+import ModernVisitorGuide from '../components/sections/ModernVisitorGuide.tsx';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
 ---
 
-<BaseLayout title="Welcome Home">
+<ModernLayout title="Welcome to NBCC - New Brunswick Church of Christ">
 	<!-- Hero Section -->
-	<section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 min-h-96">
-		<div class="container mx-auto px-4 py-20">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-					Welcome to <span class="text-blue-600">NBCC</span>
-				</h1>
-				<p class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-					Love God • Love Others • Share Truth
-				</p>
-				<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-					A welcoming church at the heart of Indiana, serving our community since 1856. 
-					Join us as we grow in our love of God and for one another.
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/services" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-						Plan Your Visit
-					</a>
-					<a href="/about" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-						Learn About Us
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	<ModernHero client:load />
 
-	<!-- Service Times Quick Info -->
-	<section class="py-16 bg-white">
+	<!-- Service Times -->
+	<ModernServiceTimes client:visible />
+
+	<!-- About Section -->
+	<section class="section-padding bg-white">
 		<div class="container mx-auto px-4">
 			<div class="max-w-6xl mx-auto">
-				<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Join Us This Week</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<!-- Sunday Services -->
-					<div class="bg-gray-50 rounded-xl p-8 text-center">
-						<div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-							</svg>
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div>
+							<h2 class="heading-lg text-gray-900 mb-6">A Church for Real Life</h2>
+							<p class="text-lg text-gray-600 mb-4">
+								Since 1856, New Brunswick Church of Christ has been a cornerstone of faith in our community. 
+								We're an independent, non-denominational church committed to following Jesus and serving our neighbors.
+							</p>
+							<p class="text-lg text-gray-600 mb-6">
+								Our mission is simple: Love God, Love Others, Share Truth. We believe church should be a place 
+								where you can be yourself, ask honest questions, and grow in authentic faith.
+							</p>
+							<div class="space-y-3">
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Contemporary worship in a casual atmosphere</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Biblical teaching relevant to everyday life</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Programs for all ages and life stages</span>
+								</div>
+							</div>
+							<div class="mt-8">
+								<a href="/about" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
+									Learn more about us
+									<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+									</svg>
+								</a>
+							</div>
 						</div>
-						<h3 class="text-xl font-semibold text-gray-900 mb-2">Sunday Services</h3>
-						<div class="space-y-2 text-gray-600">
-							<p><strong>Sunday School:</strong> 9:00 AM</p>
-							<p><strong>Main Service:</strong> 10:00 AM</p>
-							<p><strong>Kids Church:</strong> 10:20 AM</p>
+					</FadeIn>
+					
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2874" 
+								alt="Church community gathering" 
+								class="rounded-lg shadow-xl"
+							/>
+							<div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+								<p class="text-3xl font-bold">168</p>
+								<p class="text-sm">Years of Faith & Service</p>
+							</div>
 						</div>
-					</div>
-
-					<!-- Wednesday Prayer -->
-					<div class="bg-gray-50 rounded-xl p-8 text-center">
-						<div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 11V9a1 1 0 112 0v2"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-semibold text-gray-900 mb-2">Midweek Prayer</h3>
-						<div class="space-y-2 text-gray-600">
-							<p><strong>Wednesdays:</strong> 7:00 PM</p>
-							<p>Join us for prayer and fellowship</p>
-						</div>
-					</div>
-
-					<!-- Location -->
-					<div class="bg-gray-50 rounded-xl p-8 text-center">
-						<div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-semibold text-gray-900 mb-2">Visit Us</h3>
-						<div class="space-y-1 text-gray-600">
-							<p>6480 S State Road 39</p>
-							<p>Lebanon, IN 46052</p>
-							<p class="text-sm">Easy parking available</p>
-						</div>
-					</div>
+					</FadeIn>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- About Preview -->
-	<section class="py-16 bg-gray-50">
-		<div class="container mx-auto px-4">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-bold text-gray-900 mb-6">More Than a Church</h2>
-				<p class="text-lg text-gray-600 mb-8">
-					New Brunswick Church of Christ has been serving our community since 1856. 
-					We are an independent, non-denominational Christian Church rooted in the stories 
-					of the Bible and founded on the life and teachings of Jesus Christ.
-				</p>
-				<p class="text-lg text-gray-600 mb-8">
-					No matter who you are, there's a special place for you at our church. 
-					We believe worship is something that can be expressed in everything we do, 
-					and we're committed to growing together in faith and fellowship.
-				</p>
-				<a href="/about" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-					Learn more about our story
-					<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</section>
+	<!-- Visitor Guide -->
+	<ModernVisitorGuide client:visible />
 
-	<!-- Ministries Preview -->
-	<section class="py-16 bg-white">
+	<!-- Ministries -->
+	<section class="section-padding bg-gray-50">
 		<div class="container mx-auto px-4">
 			<div class="max-w-6xl mx-auto">
-				<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Ministries</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-					<div class="bg-blue-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-						<img src="/logos/Youthgroup.jpg" alt="Youth Group" class="w-16 h-16 rounded-lg mx-auto mb-4 object-cover" />
-						<h3 class="font-semibold text-gray-900 mb-2">Youth Group</h3>
-						<p class="text-sm text-gray-600">Growing faith together through fellowship and fun</p>
+				<FadeIn client:visible>
+					<div class="text-center mb-12">
+						<h2 class="heading-lg text-gray-900 mb-4">Get Involved</h2>
+						<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+							From children to seniors, we have ministries designed to help you grow in faith and community.
+						</p>
 					</div>
-					
-					<div class="bg-green-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-						<img src="/logos/VBS.jpg" alt="Kids Church" class="w-16 h-16 rounded-lg mx-auto mb-4 object-cover" />
-						<h3 class="font-semibold text-gray-900 mb-2">Kids Church & VBS</h3>
-						<p class="text-sm text-gray-600">Age-appropriate worship and learning for children</p>
-					</div>
-					
-					<div class="bg-purple-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-						<img src="/logos/BibleBowl.jpg" alt="Bible Bowl" class="w-16 h-16 rounded-lg mx-auto mb-4 object-cover" />
-						<h3 class="font-semibold text-gray-900 mb-2">Bible Bowl</h3>
-						<p class="text-sm text-gray-600">Competitive Bible study for youth and teens</p>
-					</div>
-					
-					<div class="bg-orange-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-						<div class="w-16 h-16 bg-orange-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-							<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-							</svg>
-						</div>
-						<h3 class="font-semibold text-gray-900 mb-2">Community Outreach</h3>
-						<p class="text-sm text-gray-600">Food pantry, missions, and local service</p>
-					</div>
-				</div>
+				</FadeIn>
 				
-				<div class="text-center mt-8">
-					<a href="/ministries" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-						Explore All Ministries
-					</a>
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="card-modern p-6 h-full">
+							<img 
+								src="/logos/Youthgroup.jpg" 
+								alt="Youth Group" 
+								class="w-16 h-16 rounded-lg mb-4 object-cover"
+							/>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Youth Ministry</h3>
+							<p class="text-gray-600 mb-4">Middle and high school students grow in faith through games, worship, and biblical teaching.</p>
+							<a href="/ministries" class="text-blue-600 font-medium hover:text-blue-700 transition-colors">Learn more →</a>
+						</div>
+					</AnimatedCard>
+					
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="card-modern p-6 h-full">
+							<img 
+								src="/logos/VBS.jpg" 
+								alt="Children's Ministry" 
+								class="w-16 h-16 rounded-lg mb-4 object-cover"
+							/>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Kids Church</h3>
+							<p class="text-gray-600 mb-4">Age-appropriate worship and teaching help children discover God's love in fun, engaging ways.</p>
+							<a href="/ministries" class="text-blue-600 font-medium hover:text-blue-700 transition-colors">Learn more →</a>
+						</div>
+					</AnimatedCard>
+					
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="card-modern p-6 h-full">
+							<img 
+								src="/logos/BibleBowl.jpg" 
+								alt="Bible Bowl" 
+								class="w-16 h-16 rounded-lg mb-4 object-cover"
+							/>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Bible Bowl</h3>
+							<p class="text-gray-600 mb-4">Competitive Bible study program that makes learning Scripture fun and memorable for all ages.</p>
+							<a href="/ministries" class="text-blue-600 font-medium hover:text-blue-700 transition-colors">Learn more →</a>
+						</div>
+					</AnimatedCard>
+					
+					<AnimatedCard client:visible delay={0.4}>
+						<div class="card-modern p-6 h-full">
+							<div class="w-16 h-16 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+								<svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Small Groups</h3>
+							<p class="text-gray-600 mb-4">Connect with others in home-based groups for Bible study, prayer, and authentic community.</p>
+							<a href="/ministries" class="text-blue-600 font-medium hover:text-blue-700 transition-colors">Learn more →</a>
+						</div>
+					</AnimatedCard>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Contact CTA -->
-	<section class="py-16 bg-blue-600 text-white">
+	<!-- Call to Action -->
+	<section class="section-padding bg-gradient-to-br from-blue-600 to-blue-700 text-white">
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-bold mb-6">Ready to Take the Next Step?</h2>
-				<p class="text-xl mb-8 text-blue-100">
-					We'd love to meet you! Whether you're new to faith or looking for a church home, 
-					you're welcome here.
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-						Get in Touch
-					</a>
-					<a href="/prayer-request" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-						Prayer Request
-					</a>
-				</div>
-				<div class="mt-8 text-blue-100">
-					<p class="mb-2">Call us: (765) 482-5265</p>
-					<p>Email: office@nbcc-church.org</p>
-				</div>
+				<FadeIn client:visible>
+					<h2 class="heading-lg mb-6">Ready to Take the Next Step?</h2>
+					<p class="text-xl mb-10 text-blue-100">
+						Whether you're exploring faith for the first time or looking for a new church home, 
+						we'd love to connect with you.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">
+							Get in Touch
+						</a>
+						<a href="/prayer-request" class="btn-secondary border-white text-white hover:bg-white hover:text-blue-600">
+							Submit a Prayer Request
+						</a>
+					</div>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.3}>
+					<div class="mt-12 grid sm:grid-cols-2 gap-6 max-w-md mx-auto text-left">
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-blue-200 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+							</svg>
+							<div>
+								<p class="font-semibold">Call us</p>
+								<p class="text-blue-100">(765) 482-5265</p>
+							</div>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-blue-200 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+							</svg>
+							<div>
+								<p class="font-semibold">Email us</p>
+								<p class="text-blue-100">office@nbcc-church.org</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
 			</div>
 		</div>
 	</section>
-</BaseLayout>
+</ModernLayout>

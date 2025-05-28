@@ -1,8 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// Use require for ScrollTrigger to avoid CommonJS import issues
+const ScrollTrigger = typeof window !== 'undefined' ? require('gsap/ScrollTrigger').ScrollTrigger : null;
+
+if (ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -25,7 +29,7 @@ export default function ScrollReveal({
 
   useEffect(() => {
     const element = ref.current;
-    if (!element) return;
+    if (!element || !ScrollTrigger) return;
 
     const animations = {
       fade: {
@@ -67,7 +71,9 @@ export default function ScrollReveal({
     );
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      if (ScrollTrigger) {
+        ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill());
+      }
     };
   }, [animation, duration, delay, stagger]);
 

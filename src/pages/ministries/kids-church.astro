@@ -1,0 +1,367 @@
+---
+import ModernLayout from '../../layouts/ModernLayout.astro';
+import FadeIn from '../../components/animations/FadeIn.tsx';
+import AnimatedCard from '../../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Kids Church - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="/logos/VBS.jpg" 
+					alt="Kids Church" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-orange-900/90 to-yellow-700/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Kids Church</h1>
+					<p class="text-2xl text-yellow-100 max-w-3xl mx-auto">
+						Where faith comes alive for children ages 2 through 6th grade
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Overview Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div>
+							<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Growing Little Disciples</h2>
+							<p class="text-lg text-gray-600 mb-6">
+								Kids Church is designed to help children discover God's love in fun, engaging, and age-appropriate ways. 
+								During our 10 AM Sunday service, children move to the fellowship room after communion for interactive 
+								Bible lessons, worship songs, crafts, and activities that make faith come alive.
+							</p>
+							<div class="bg-orange-50 rounded-lg p-6 mb-6">
+								<h3 class="text-xl font-bold text-gray-900 mb-3">When We Meet</h3>
+								<p class="text-gray-700">
+									<strong>During:</strong> 10 AM Sunday Worship Service<br />
+									<strong>Where:</strong> Fellowship Room (after communion)<br />
+									<strong>Ages:</strong> 2 years through 6th grade<br />
+									<strong>What to Bring:</strong> Just your child and their smile!
+								</p>
+							</div>
+							<a href="/contact" class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors group">
+								Register your child
+								<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+								</svg>
+							</a>
+						</div>
+					</FadeIn>
+					
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=2940" 
+								alt="Children learning" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -right-8 bg-gradient-to-br from-orange-500 to-yellow-500 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-3xl font-bold">100+</p>
+								<p class="text-yellow-100">Kids Learning About Jesus</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What We Teach -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Building a Foundation of Faith</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Our curriculum is designed to teach children the fundamentals of faith in ways they can understand and apply
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Bible Stories</h3>
+							<p class="text-gray-600 text-sm">
+								Classic Bible stories taught through interactive lessons and visual aids
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Prayer Time</h3>
+							<p class="text-gray-600 text-sm">
+								Teaching children how to talk to God and the power of prayer
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Worship Songs</h3>
+							<p class="text-gray-600 text-sm">
+								Fun, energetic songs that help kids praise God and remember His Word
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Life Application</h3>
+							<p class="text-gray-600 text-sm">
+								Practical lessons on kindness, sharing, and following Jesus daily
+							</p>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- VBS Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Vacation Bible School</h2>
+						<p class="text-xl text-gray-600">Our biggest kids event of the year!</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div class="space-y-6">
+							<div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-8">
+								<h3 class="text-2xl font-bold text-gray-900 mb-4">VBS 2023: Keepers of The Kingdom</h3>
+								<p class="text-gray-700 mb-4">
+									Our medieval-themed VBS was an incredible week of knights, castles, and discovering 
+									how to put on the full armor of God! Kids enjoyed:
+								</p>
+								<ul class="space-y-2">
+									<li class="flex items-start">
+										<svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										<span class="text-gray-700">Bible adventures and kingdom quests</span>
+									</li>
+									<li class="flex items-start">
+										<svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										<span class="text-gray-700">Medieval crafts and armor-making</span>
+									</li>
+									<li class="flex items-start">
+										<svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										<span class="text-gray-700">Kingdom feast snacks</span>
+									</li>
+									<li class="flex items-start">
+										<svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										<span class="text-gray-700">Epic games and challenges</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8">
+								<h3 class="text-2xl font-bold text-gray-900 mb-4">VBS 2022: Food Truck Party</h3>
+								<p class="text-gray-700">
+									Kids discovered that God provides everything we need as they visited different 
+									food truck stations, enjoyed tasty snacks, and learned about sharing God's love!
+								</p>
+							</div>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?q=80&w=2940" 
+								alt="VBS activities" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -top-8 -right-8 bg-gradient-to-br from-yellow-400 to-orange-500 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-lg font-semibold mb-2">Save the Date!</p>
+								<p class="text-yellow-100">VBS 2024 Coming This Summer</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Elementary Youth Group -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-8">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Elementary Youth Group</h3>
+						<p class="text-xl text-gray-600">For grade school & junior high students</p>
+					</div>
+				</ScrollReveal>
+
+				<FadeIn client:visible>
+					<div class="bg-white rounded-lg p-8 shadow-xl">
+						<div class="grid md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-4">Sunday Evenings</h3>
+								<p class="text-gray-700 mb-4">
+									Our elementary-aged kids have their own youth group time from 5:00-7:00 PM on Sundays. 
+									It's a perfect blend of games, worship, Bible lessons, and fun designed specifically 
+									for this age group.
+								</p>
+								<p class="text-gray-700">
+									Activities include dodge ball, capture the flag, crafts, and age-appropriate 
+									discussions about faith and following Jesus.
+								</p>
+							</div>
+							<div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-6">
+								<h4 class="font-bold text-gray-900 mb-3">Meeting Details</h4>
+								<p class="text-gray-700">
+									<strong>When:</strong> Sundays, 5:00-7:00 PM<br />
+									<strong>Who:</strong> Grade school & junior high<br />
+									<strong>Where:</strong> NBCC Fellowship Room
+								</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Safety & Care -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Your Child's Safety is Our Priority</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							We maintain the highest standards of safety and care for all children in our programs
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Background Checks</h3>
+							<p class="text-gray-600">
+								All volunteers undergo thorough background checks and child protection training
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Trained Teachers</h3>
+							<p class="text-gray-600">
+								Caring volunteers trained in age-appropriate teaching methods and child safety
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Secure Check-in</h3>
+							<p class="text-gray-600">
+								Safe and secure check-in/check-out procedures for all children's programs
+							</p>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Help Your Child Grow in Faith</h2>
+					<p class="text-xl mb-10 text-yellow-100">
+						Join us this Sunday and watch your child discover the joy of knowing Jesus 
+						in a fun, safe, and nurturing environment.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="bg-orange-600/50 backdrop-blur-sm rounded-lg p-8 mb-8">
+						<h3 class="text-2xl font-bold mb-4">First Time?</h3>
+						<p class="text-lg text-yellow-100">
+							We'll help you register your child and show you where to go. 
+							Our friendly team will make sure your family feels welcome!
+						</p>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Register Your Child
+						</a>
+						<a href="/services" class="bg-transparent text-primary px-8 py-3 rounded-lg border-2 border-primary font-semibold transition-all duration-200 inline-block hover:bg-primary hover:text-white border-white text-white hover:bg-white hover:text-orange-600">
+							Plan Your Visit
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

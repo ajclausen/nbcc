@@ -1,0 +1,169 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+---
+
+<ModernLayout title="Page Not Found - New Brunswick Church of Christ">
+  <!-- 404 Hero Section -->
+  <section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <FadeIn client:visible>
+          <div class="mb-8">
+            <h1 class="text-8xl font-bold text-blue-600 mb-4">404</h1>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Page Not Found</h2>
+            <p class="text-xl text-gray-600 mb-8">
+              We can't seem to find the page you're looking for. But don't worry - 
+              there are plenty of ways to connect with our church family!
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn client:visible delay={0.2}>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="/" class="bg-primary text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-primary-dark hover:-translate-y-px hover:shadow-lg">
+              Go Home
+            </a>
+            <a href="/contact" class="bg-transparent text-primary px-8 py-3 rounded-lg border-2 border-primary font-semibold transition-all duration-200 inline-block hover:bg-primary hover:text-white">
+              Contact Us
+            </a>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+
+  <!-- Helpful Links -->
+  <section class="py-12 md:py-16 lg:py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <FadeIn client:visible>
+          <div class="text-center mb-12">
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug tracking-tight text-gray-900 mb-4">Maybe you were looking for...</h3>
+            <p class="text-gray-600">Here are some popular pages that might help you find what you need</p>
+          </div>
+        </FadeIn>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatedCard client:visible>
+            <a href="/services" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Service Times</h4>
+                <p class="text-gray-600 text-sm">Find out when we gather for worship and what to expect</p>
+              </div>
+            </a>
+          </AnimatedCard>
+
+          <AnimatedCard client:visible delay={0.1}>
+            <a href="/about" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">About Us</h4>
+                <p class="text-gray-600 text-sm">Learn about our history, mission, and what we believe</p>
+              </div>
+            </a>
+          </AnimatedCard>
+
+          <AnimatedCard client:visible delay={0.2}>
+            <a href="/ministries" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">Ministries</h4>
+                <p class="text-gray-600 text-sm">Discover ways to get involved and serve in our community</p>
+              </div>
+            </a>
+          </AnimatedCard>
+
+          <AnimatedCard client:visible delay={0.3}>
+            <a href="/events" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">Events</h4>
+                <p class="text-gray-600 text-sm">Check out upcoming events and special services</p>
+              </div>
+            </a>
+          </AnimatedCard>
+
+          <AnimatedCard client:visible delay={0.4}>
+            <a href="/give" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Give Online</h4>
+                <p class="text-gray-600 text-sm">Support our ministry through secure online giving</p>
+              </div>
+            </a>
+          </AnimatedCard>
+
+          <AnimatedCard client:visible delay={0.5}>
+            <a href="/contact" class="block h-full group">
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">Contact Us</h4>
+                <p class="text-gray-600 text-sm">Get in touch with our church family</p>
+              </div>
+            </a>
+          </AnimatedCard>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <FadeIn client:visible>
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug tracking-tight text-gray-900 mb-4">Still can't find what you need?</h3>
+          <p class="text-gray-600 mb-8">Try searching our site or contact us directly</p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
+            <input
+              type="search"
+              placeholder="Search our website..."
+              class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Search
+            </button>
+          </div>
+
+          <p class="text-sm text-gray-500">
+            Or call us at 
+            <a href="tel:+17654825265" class="text-blue-600 hover:text-blue-700 font-medium">
+              (765) 482-5265
+            </a>
+          </p>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+</ModernLayout>

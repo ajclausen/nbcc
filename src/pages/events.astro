@@ -1,0 +1,521 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Events - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2940" 
+					alt="Church events" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-blue-900/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Events at NBCC</h1>
+					<p class="text-2xl text-blue-100 max-w-3xl mx-auto">
+						Join us for worship, fellowship, and community throughout the year
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Upcoming Events -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Upcoming Events</h2>
+						<p class="text-xl text-gray-600">
+							Don't miss these opportunities to connect and grow
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<!-- Featured Event -->
+				<FadeIn client:visible>
+					<div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg p-8 text-white mb-12 shadow-2xl">
+						<div class="grid md:grid-cols-2 gap-8 items-center">
+							<div>
+								<div class="flex items-center mb-4">
+									<span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+										Featured Event
+									</span>
+								</div>
+								<h3 class="text-3xl font-bold mb-4">VBS 2024: Kingdom Quest</h3>
+								<p class="text-lg text-purple-100 mb-6">
+									Join us for an epic adventure where kids will discover how to put on the full armor 
+									of God! Games, crafts, snacks, and biblical lessons await.
+								</p>
+								<div class="space-y-2 mb-6">
+									<p class="flex items-center">
+										<svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+										</svg>
+										June 10-14, 2024
+									</p>
+									<p class="flex items-center">
+										<svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										6:00 PM - 8:30 PM
+									</p>
+									<p class="flex items-center">
+										<svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+										</svg>
+										NBCC Fellowship Hall
+									</p>
+								</div>
+								<a href="/contact" class="inline-flex items-center bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+									Register Now
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+									</svg>
+								</a>
+							</div>
+							<div class="hidden md:block">
+								<img 
+									src="/logos/VBS.jpg" 
+									alt="VBS" 
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+
+				<!-- Event Grid -->
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Weekly
+									</div>
+									<span class="text-gray-500 text-sm">Every Sunday</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Sunday Worship Services</h3>
+								<p class="text-gray-600 mb-4">
+									Join us for contemporary worship and biblical teaching every Sunday morning.
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										9:00 AM Sunday School | 10:00 AM Worship
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Weekly
+									</div>
+									<span class="text-gray-500 text-sm">Every Wednesday</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Midweek Prayer Service</h3>
+								<p class="text-gray-600 mb-4">
+									A time of prayer, worship, and biblical reflection to refuel your faith midweek.
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										7:00 PM
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Monthly
+									</div>
+									<span class="text-gray-500 text-sm">2nd & 4th Saturday</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Food Pantry</h3>
+								<p class="text-gray-600 mb-4">
+									Serving families in need with groceries and essentials. Volunteers always welcome!
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										9:00 AM - 11:00 AM
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Special Event
+									</div>
+									<span class="text-gray-500 text-sm">April 20</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Easter Sunrise Service</h3>
+								<p class="text-gray-600 mb-4">
+									Celebrate the resurrection with us at dawn, followed by breakfast fellowship.
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										6:30 AM Service | 7:30 AM Breakfast
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.4}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Annual
+									</div>
+									<span class="text-gray-500 text-sm">October 31</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Trunk or Treat</h3>
+								<p class="text-gray-600 mb-4">
+									Safe Halloween alternative with decorated car trunks, games, and candy for the whole community.
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										6:00 PM - 8:00 PM
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.5}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-6">
+								<div class="flex justify-between items-start mb-4">
+									<div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
+										Special Event
+									</div>
+									<span class="text-gray-500 text-sm">December 24</span>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Christmas Eve Service</h3>
+								<p class="text-gray-600 mb-4">
+									Candlelight service celebrating the birth of Christ with carols and communion.
+								</p>
+								<div class="space-y-2 text-sm text-gray-600">
+									<p class="flex items-center">
+										<svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+										</svg>
+										7:00 PM
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Youth Events -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Youth & Children Events</h2>
+						<p class="text-xl text-gray-600">
+							Special activities designed for our younger members
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8">
+							<img 
+								src="/logos/Youthgroup.jpg" 
+								alt="Youth Group" 
+								class="w-20 h-20 rounded-lg mb-4"
+							/>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Youth Group Activities</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Sunday Night Youth Group</p>
+										<p class="text-gray-600 text-sm">Every Sunday 6:00-7:30 PM (Aug-May)</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Annual Youth Retreat</p>
+										<p class="text-gray-600 text-sm">Fall weekend at camp with activities</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Summer Camp at Hanging Rock</p>
+										<p class="text-gray-600 text-sm">Week-long camp experience in June</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">ICYC Conference</p>
+										<p class="text-gray-600 text-sm">Indiana Christian Youth Conference</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-8">
+							<img 
+								src="/logos/VBS.jpg" 
+								alt="Kids Activities" 
+								class="w-20 h-20 rounded-lg mb-4"
+							/>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Children's Programs</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Kids Church</p>
+										<p class="text-gray-600 text-sm">Every Sunday during 10 AM service</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Elementary Youth Group</p>
+										<p class="text-gray-600 text-sm">Sundays 5:00-7:00 PM</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">VBS - Vacation Bible School</p>
+										<p class="text-gray-600 text-sm">One week in June, evenings</p>
+									</div>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<div>
+										<p class="font-semibold text-gray-900">Easter Egg Hunt</p>
+										<p class="text-gray-600 text-sm">Easter Saturday morning</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bible Bowl Schedule -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Bible Bowl Season</h2>
+						<img 
+							src="/logos/BibleBowl.jpg" 
+							alt="Bible Bowl" 
+							class="w-32 h-32 rounded-lg mx-auto mb-6"
+						/>
+						<p class="text-xl text-gray-600">
+							Competitive Bible study for students grades 3-12
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Fall Season</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-700">
+									<strong>Season:</strong> September - November
+								</li>
+								<li class="text-gray-700">
+									<strong>Practice:</strong> Sunday afternoons
+								</li>
+								<li class="text-gray-700">
+									<strong>Tournaments:</strong> Monthly regional competitions
+								</li>
+								<li class="text-gray-700">
+									<strong>National Tournament:</strong> December
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Spring Season</h3>
+							<ul class="space-y-2">
+								<li class="text-gray-700">
+									<strong>Season:</strong> March - May
+								</li>
+								<li class="text-gray-700">
+									<strong>Practice:</strong> Sunday afternoons
+								</li>
+								<li class="text-gray-700">
+									<strong>Tournaments:</strong> Monthly regional competitions
+								</li>
+								<li class="text-gray-700">
+									<strong>National Tournament:</strong> June
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Calendar CTA -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<ScrollReveal client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Stay Connected</h2>
+					<p class="text-xl text-gray-600 mb-8">
+						Never miss an event! Subscribe to our calendar and follow us for updates.
+					</p>
+				</ScrollReveal>
+
+				<FadeIn client:visible>
+					<div class="bg-white rounded-lg p-8 shadow-xl">
+						<div class="grid md:grid-cols-3 gap-6">
+							<div class="text-center">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-gray-900 mb-2">Online Calendar</h3>
+								<p class="text-gray-600 text-sm">
+									View and subscribe to our full event calendar
+								</p>
+							</div>
+
+							<div class="text-center">
+								<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-gray-900 mb-2">Email Updates</h3>
+								<p class="text-gray-600 text-sm">
+									Get event reminders delivered to your inbox
+								</p>
+							</div>
+
+							<div class="text-center">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-gray-900 mb-2">Announcements</h3>
+								<p class="text-gray-600 text-sm">
+									Weekly updates during Sunday service
+								</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Join Us for Our Next Event</h2>
+					<p class="text-xl mb-10 text-blue-100">
+						There's always something happening at NBCC. From worship services to community outreach, 
+						we'd love to have you join us!
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Get Event Info
+						</a>
+						<a href="/services" class="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-purple-600">
+							Visit This Sunday
+						</a>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<p class="mt-8 text-purple-200">
+						Questions about events? Call us at (765) 482-5265 or email office@nbcc-church.org
+					</p>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

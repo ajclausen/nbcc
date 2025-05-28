@@ -29,10 +29,10 @@ const faqs = [
 ];
 
 export default function ModernVisitorGuide() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="section-padding bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -41,7 +41,7 @@ export default function ModernVisitorGuide() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="heading-lg text-gray-900 mb-4">Planning Your First Visit?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-4">Planning Your First Visit?</h2>
             <p className="text-xl text-gray-600">
               We know visiting a new church can feel uncertain. Here's everything you need to know.
             </p>
@@ -100,12 +100,12 @@ export default function ModernVisitorGuide() {
               viewport={{ once: true }}
               className="lg:sticky lg:top-24"
             >
-              <div className="card-modern p-8">
+              <div className="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Your First Sunday</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
                       1
                     </div>
                     <div className="ml-4">
@@ -115,7 +115,7 @@ export default function ModernVisitorGuide() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
                       2
                     </div>
                     <div className="ml-4">
@@ -125,7 +125,7 @@ export default function ModernVisitorGuide() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
                       3
                     </div>
                     <div className="ml-4">
@@ -135,7 +135,7 @@ export default function ModernVisitorGuide() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
                       4
                     </div>
                     <div className="ml-4">
@@ -146,10 +146,10 @@ export default function ModernVisitorGuide() {
                 </div>
 
                 <div className="mt-8 space-y-3">
-                  <a href="/contact" className="btn-primary w-full text-center block">
+                  <a href="/contact" className="bg-primary text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-primary-dark hover:-translate-y-px hover:shadow-lg w-full text-center block">
                     Get Directions
                   </a>
-                  <a href="/contact" className="btn-secondary w-full text-center block">
+                  <a href="/contact" className="bg-transparent text-primary px-8 py-3 rounded-lg border-2 border-primary font-semibold transition-all duration-200 hover:bg-primary hover:text-white w-full text-center block">
                     Contact Us
                   </a>
                 </div>

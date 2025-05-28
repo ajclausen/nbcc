@@ -1,0 +1,414 @@
+---
+import ModernLayout from '../../layouts/ModernLayout.astro';
+import FadeIn from '../../components/animations/FadeIn.tsx';
+import AnimatedCard from '../../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Food Pantry - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2940" 
+					alt="Helping hands" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-orange-900/90 to-orange-700/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Food Pantry Ministry</h1>
+					<p class="text-2xl text-orange-100 max-w-3xl mx-auto">
+						Serving our neighbors with love and dignity
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Overview Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div>
+							<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Fighting Food Insecurity Together</h2>
+							<p class="text-lg text-gray-600 mb-6">
+								Our food pantry ministry serves families in Boone County who are struggling with food insecurity. 
+								We believe that no one should go hungry, and we're committed to providing nutritious food 
+								with dignity and respect to all who need assistance.
+							</p>
+							<div class="bg-orange-50 rounded-lg p-6 mb-6">
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Pantry Hours</h3>
+								<p class="text-gray-700">
+									<strong>When:</strong> 2nd and 4th Saturday of each month<br />
+									<strong>Time:</strong> 9:00 AM - 11:00 AM<br />
+									<strong>Where:</strong> NBCC Fellowship Hall<br />
+									<strong>Who:</strong> Anyone in need - no questions asked
+								</p>
+							</div>
+							<div class="flex flex-col sm:flex-row gap-4">
+								<a href="/contact" class="inline-flex items-center justify-center text-orange-600 font-semibold hover:text-orange-700 transition-colors group">
+									Get assistance
+									<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+									</svg>
+								</a>
+								<a href="#volunteer" class="inline-flex items-center justify-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
+									Volunteer with us
+									<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</FadeIn>
+					
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2940" 
+								alt="Food pantry volunteers" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -left-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-3xl font-bold">500+</p>
+								<p class="text-orange-100">Families Served Monthly</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What We Provide -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">What We Provide</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Our pantry is stocked with a variety of nutritious foods to help families thrive
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Fresh Produce</h3>
+							<p class="text-gray-600 text-sm">
+								Fruits and vegetables when available through partnerships with local farms
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Canned Goods</h3>
+							<p class="text-gray-600 text-sm">
+								Non-perishable items including vegetables, fruits, soups, and proteins
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Dairy & Eggs</h3>
+							<p class="text-gray-600 text-sm">
+								Milk, cheese, yogurt, and eggs to provide essential nutrients
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Staples & More</h3>
+							<p class="text-gray-600 text-sm">
+								Bread, pasta, rice, cereal, and personal care items when available
+							</p>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How to Get Help -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Getting Help is Easy</h2>
+						<p class="text-xl text-gray-600">
+							We're here to help, no questions asked. Everyone is welcome.
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<FadeIn client:visible>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-3xl font-bold text-orange-600">1</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Visit During Pantry Hours</h3>
+							<p class="text-gray-600">
+								Come to our fellowship hall on the 2nd or 4th Saturday between 9-11 AM
+							</p>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-orange-200 to-orange-300 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-3xl font-bold text-orange-600">2</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Simple Registration</h3>
+							<p class="text-gray-600">
+								First-time visitors complete a brief form. We respect your privacy and dignity.
+							</p>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-orange-300 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-3xl font-bold text-white">3</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Shop with Dignity</h3>
+							<p class="text-gray-600">
+								Select items based on your family's needs. Our volunteers are here to help!
+							</p>
+						</div>
+					</FadeIn>
+				</div>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="mt-12 bg-blue-50 rounded-lg p-8 text-center">
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Emergency Food Assistance</h3>
+						<p class="text-gray-700 mb-4">
+							If you need food outside of regular pantry hours, please contact the church office. 
+							We'll do our best to arrange emergency assistance.
+						</p>
+						<p class="text-gray-700">
+							<strong>Call:</strong> (765) 482-5265
+						</p>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Volunteer Opportunities -->
+	<section id="volunteer" class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Join Our Volunteer Team</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Your time and talents can make a real difference in the lives of families in our community
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Pantry Day Volunteers</h3>
+								<p class="text-gray-600">
+									Help distribute food, assist families with shopping, and create a welcoming environment.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V3m0 4l-4 4m20 2h-6M20 13v4m0-4l4-4"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Stock & Organize</h3>
+								<p class="text-gray-600">
+									Sort donations, stock shelves, and help keep our pantry organized and ready to serve.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Food Drives</h3>
+								<p class="text-gray-600">
+									Organize and participate in food drives to keep our pantry stocked year-round.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="mt-12 text-center">
+						<a href="/contact" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Sign up to volunteer
+							<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+							</svg>
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Donation Information -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Ways to Support the Pantry</h2>
+						<p class="text-xl text-gray-600">
+							Every donation helps us serve more families in need
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Most Needed Items</h3>
+							<ul class="space-y-2">
+								<li class="flex items-center text-gray-700">
+									<svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Canned proteins (tuna, chicken, beans)
+								</li>
+								<li class="flex items-center text-gray-700">
+									<svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Peanut butter & jelly
+								</li>
+								<li class="flex items-center text-gray-700">
+									<svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Pasta & pasta sauce
+								</li>
+								<li class="flex items-center text-gray-700">
+									<svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Cereal & oatmeal
+								</li>
+								<li class="flex items-center text-gray-700">
+									<svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									Personal care items
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Financial Donations</h3>
+							<p class="text-gray-700 mb-4">
+								Monetary gifts allow us to purchase fresh produce, dairy, and fill gaps in our inventory. 
+								Every dollar helps us serve more families.
+							</p>
+							<a href="/give" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-[1.02]">
+								Make a Donation
+							</a>
+							<p class="text-sm text-gray-600 mt-3 text-center">
+								Designate your gift for "Food Pantry"
+							</p>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Together We Can End Hunger</h2>
+					<p class="text-xl mb-10 text-orange-100">
+						No one should have to choose between paying bills and feeding their family. 
+						With your help, we can ensure our neighbors have access to nutritious food.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="bg-orange-700/50 backdrop-blur-sm rounded-lg p-8 mb-8">
+						<blockquote class="text-lg text-orange-100 italic mb-4">
+							"For I was hungry and you gave me something to eat, I was thirsty and you gave me 
+							something to drink, I was a stranger and you invited me in"
+						</blockquote>
+						<cite class="text-orange-200 text-sm">- Matthew 25:35</cite>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Get Involved
+						</a>
+						<a href="/give" class="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-orange-600">
+							Support the Pantry
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

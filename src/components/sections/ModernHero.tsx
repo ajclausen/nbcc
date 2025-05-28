@@ -45,7 +45,7 @@ export default function ModernHero() {
             alt={slides[currentSlide].title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 gradient-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
         </motion.div>
       </AnimatePresence>
 
@@ -59,7 +59,7 @@ export default function ModernHero() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="heading-xl mb-6">{slides[currentSlide].title}</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">{slides[currentSlide].title}</h1>
               <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
                 {slides[currentSlide].subtitle}
               </p>
@@ -72,10 +72,10 @@ export default function ModernHero() {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <a href="/about" className="btn-primary bg-white text-gray-900 hover:bg-gray-100">
+            <a href="/about" className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 shadow-lg">
               I'm New Here
             </a>
-            <a href="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-gray-900">
+            <a href="/services" className="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-gray-900">
               Plan Your Visit
             </a>
           </motion.div>

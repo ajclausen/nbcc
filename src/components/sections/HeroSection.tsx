@@ -37,10 +37,9 @@ export default function HeroSection() {
           className="absolute inset-0"
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center brightness-[0.6]"
             style={{ 
-              backgroundImage: `url(${heroImages[currentIndex]})`,
-              filter: 'brightness(0.6)'
+              backgroundImage: `url(${heroImages[currentIndex]})`
             }}
           />
         </motion.div>

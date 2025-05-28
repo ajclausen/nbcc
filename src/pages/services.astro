@@ -1,0 +1,355 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Service Times - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2940" 
+					alt="Worship service" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-700/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Join Us for Worship</h1>
+					<p class="text-2xl text-blue-100 max-w-3xl mx-auto">Love God • Love Others • Share Truth</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Service Times Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Service Times</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							We gather throughout the week to worship, learn, and grow together. 
+							Join us for any of our services - everyone is welcome!
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8 mb-16">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-8 hover:shadow-2xl transition-all duration-300 group">
+							<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold text-gray-900 mb-2">Sunday School</h3>
+							<p class="text-3xl font-bold text-blue-600 mb-3">9:00 AM</p>
+							<p class="text-gray-600">
+								Age-appropriate classes for everyone from toddlers to adults. 
+								Dive deeper into God's Word in a small group setting.
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-8 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
+							<div class="absolute top-0 right-0 bg-gradient-to-br from-yellow-400 to-orange-500 text-white px-4 py-1 rounded-bl-lg text-sm font-semibold">
+								Main Service
+							</div>
+							<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold text-gray-900 mb-2">Sunday Worship</h3>
+							<p class="text-3xl font-bold text-blue-600 mb-3">10:00 AM</p>
+							<p class="text-gray-600">
+								Contemporary worship with practical, biblical teaching. 
+								Kids Church available for ages 2 through 6th grade.
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full text-center p-8 hover:shadow-2xl transition-all duration-300 group">
+							<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold text-gray-900 mb-2">Midweek Prayer</h3>
+							<p class="text-3xl font-bold text-blue-600 mb-3">7:00 PM</p>
+							<p class="text-gray-600">
+								Wednesday evenings - A time for prayer, worship, and biblical reflection 
+								to refuel your faith midweek.
+							</p>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What to Expect Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">What to Expect</h2>
+						<p class="text-xl text-gray-600">Your first visit to NBCC</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div class="space-y-6">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Easy to Find</h3>
+									<p class="text-gray-600">We're located at 6480 S State Road 39, Lebanon, IN. Look for our welcoming signs and friendly greeters in the parking lot.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Come as You Are</h3>
+									<p class="text-gray-600">We're a casual, welcoming church. Whether you dress up or come in jeans, you'll fit right in. What matters is that you're here!</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Service Length</h3>
+									<p class="text-gray-600">Our Sunday worship service typically lasts about 70-80 minutes, including worship music, communion, and the message.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">For Your Family</h3>
+									<p class="text-gray-600">We offer Kids Church during the 10 AM service for ages 2 through 6th grade, plus nursery care for infants and toddlers.</p>
+								</div>
+							</div>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2940" 
+								alt="Church welcome" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -left-8 bg-blue-600 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-lg font-semibold mb-2">First-Time Visitors</p>
+								<p class="text-blue-100">Stop by our Welcome Center for a free gift and to meet our team!</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our Worship Style -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Our Worship Style</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							We believe worship is more than just singing - it's a lifestyle of honoring God 
+							in everything we do. Our services blend contemporary music with timeless truths.
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Contemporary Music</h3>
+							<p class="text-gray-600 text-sm">Modern worship songs led by our talented worship team, including our youth band "Ablaze"</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Biblical Teaching</h3>
+							<p class="text-gray-600 text-sm">Practical, relevant messages that apply God's Word to everyday life</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Weekly Communion</h3>
+							<p class="text-gray-600 text-sm">We remember Christ's sacrifice together through communion every Sunday</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 h-full text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Prayer & Connection</h3>
+							<p class="text-gray-600 text-sm">Opportunities for prayer, fellowship, and building genuine relationships</p>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Special Services -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Special Services & Events</h2>
+						<p class="text-xl text-gray-600">Throughout the year, we gather for special celebrations and observances</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-white rounded-lg p-8 shadow-lg">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Holiday Services</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>Easter Sunrise Service</strong> - Celebrate the resurrection at dawn</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>Christmas Eve Service</strong> - A candlelight celebration of Christ's birth</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>Good Friday Service</strong> - Remembering Christ's sacrifice</span>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-white rounded-lg p-8 shadow-lg">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Special Events</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>Baptism Sundays</strong> - Celebrating new life in Christ</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>VBS Week</strong> - Summer fun and faith for kids</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-600"><strong>Community Outreach Days</strong> - Serving our neighbors together</span>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">We Can't Wait to Meet You!</h2>
+					<p class="text-xl mb-10 text-blue-100">
+						Whether you've been following Jesus for years or are just exploring faith, 
+						you'll find a warm welcome and a place to belong at NBCC.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+						<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Get Directions
+						</a>
+						<a href="/about" class="bg-transparent text-primary px-8 py-3 rounded-lg border-2 border-primary font-semibold transition-all duration-200 inline-block hover:bg-primary hover:text-white border-white text-white hover:bg-white hover:text-blue-600">
+							Learn More About Us
+						</a>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="bg-blue-700/50 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
+						<p class="text-lg font-semibold mb-2">Questions?</p>
+						<p class="text-blue-100 mb-4">
+							Feel free to call us at (765) 482-5265 or email office@nbcc-church.org
+						</p>
+						<p class="text-sm text-blue-200">
+							Our office hours are Monday-Thursday, 9 AM - 3 PM
+						</p>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

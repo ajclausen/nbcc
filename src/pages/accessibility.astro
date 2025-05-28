@@ -1,0 +1,227 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+---
+
+<ModernLayout 
+  title="Accessibility - New Brunswick Church of Christ"
+  description="Learn about our commitment to digital accessibility and how we make our website and church accessible to everyone."
+>
+  <Breadcrumbs items={[
+    { name: 'Home', href: '/' },
+    { name: 'Accessibility' }
+  ]} />
+
+  <!-- Accessibility Statement -->
+  <section class="py-12 md:py-16 lg:py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <FadeIn client:visible>
+          <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Accessibility Statement</h1>
+            <p class="text-xl text-gray-600">
+              We are committed to ensuring our church and website are accessible to everyone, 
+              regardless of ability or technology.
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn client:visible delay={0.2}>
+          <div class="prose prose-lg max-w-none mb-12">
+            <h2>Our Commitment</h2>
+            <p>
+              New Brunswick Church of Christ believes that everyone should have equal access to worship, 
+              fellowship, and information. We strive to make our physical facilities and digital presence 
+              welcoming and accessible to people of all abilities.
+            </p>
+
+            <h2>Website Accessibility Features</h2>
+            <p>Our website includes the following accessibility features:</p>
+            <ul>
+              <li><strong>Keyboard Navigation:</strong> All interactive elements can be accessed using keyboard navigation</li>
+              <li><strong>Screen Reader Support:</strong> Proper heading structure, alt text for images, and semantic markup</li>
+              <li><strong>Color Contrast:</strong> High contrast ratios for text and backgrounds to ensure readability</li>
+              <li><strong>Responsive Design:</strong> Works on all devices and screen sizes</li>
+              <li><strong>Skip Links:</strong> Allow users to skip to main content</li>
+              <li><strong>Reduced Motion:</strong> Respects user preferences for reduced motion</li>
+              <li><strong>Focus Indicators:</strong> Clear visual indicators for keyboard focus</li>
+            </ul>
+
+            <h2>Standards We Follow</h2>
+            <p>
+              We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. 
+              These guidelines explain how to make web content more accessible to people with disabilities.
+            </p>
+          </div>
+        </FadeIn>
+
+        <!-- Physical Accessibility -->
+        <FadeIn client:visible delay={0.3}>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug tracking-tight text-gray-900 mb-8 text-center">Physical Accessibility</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <AnimatedCard client:visible>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Wheelchair Access</h3>
+                <p class="text-gray-600 text-sm">
+                  Our building is fully wheelchair accessible with ramps and accessible parking spaces near the entrance.
+                </p>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard client:visible delay={0.1}>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Accessible Parking</h3>
+                <p class="text-gray-600 text-sm">
+                  Reserved parking spaces close to the entrance for visitors with mobility needs.
+                </p>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard client:visible delay={0.2}>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Hearing Assistance</h3>
+                <p class="text-gray-600 text-sm">
+                  Assistive listening devices available upon request for worship services.
+                </p>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard client:visible delay={0.3}>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Large Print</h3>
+                <p class="text-gray-600 text-sm">
+                  Large print Bibles and bulletins available at the welcome center.
+                </p>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard client:visible delay={0.4}>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Accessible Restrooms</h3>
+                <p class="text-gray-600 text-sm">
+                  Accessible restroom facilities located near the main sanctuary.
+                </p>
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard client:visible delay={0.5}>
+              <div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 text-center h-full">
+                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Welcome Assistance</h3>
+                <p class="text-gray-600 text-sm">
+                  Our greeters are trained to assist visitors with any accessibility needs.
+                </p>
+              </div>
+            </AnimatedCard>
+          </div>
+        </FadeIn>
+
+        <FadeIn client:visible delay={0.4}>
+          <div class="prose prose-lg max-w-none">
+            <h2>Feedback and Assistance</h2>
+            <p>
+              We are continuously working to improve accessibility. If you encounter any barriers 
+              or have suggestions for improvement, please let us know:
+            </p>
+            
+            <div class="bg-blue-50 p-6 rounded-lg">
+              <h3 class="text-lg font-bold text-gray-900 mb-4">Contact Us About Accessibility</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <p><strong>Phone:</strong> <a href="tel:+17654825265" class="text-blue-600 hover:text-blue-700">(765) 482-5265</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:office@nbcc-church.org" class="text-blue-600 hover:text-blue-700">office@nbcc-church.org</a></p>
+                </div>
+                <div>
+                  <p><strong>In Person:</strong> Sunday mornings at the Welcome Center</p>
+                  <p><strong>Office Hours:</strong> Monday-Thursday, 9 AM - 3 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <h2>Ongoing Improvements</h2>
+            <p>
+              Accessibility is an ongoing process. We regularly review our facilities and website 
+              to identify areas for improvement. Recent enhancements include:
+            </p>
+            <ul>
+              <li>Updated website with improved screen reader compatibility</li>
+              <li>Enhanced color contrast throughout the site</li>
+              <li>Added keyboard navigation support</li>
+              <li>Improved mobile responsiveness</li>
+            </ul>
+
+            <h2>Alternative Formats</h2>
+            <p>
+              If you need information from our website in an alternative format, please contact us. 
+              We can provide content in:
+            </p>
+            <ul>
+              <li>Large print</li>
+              <li>Email format</li>
+              <li>Phone consultation</li>
+              <li>In-person assistance</li>
+            </ul>
+
+            <p class="text-sm text-gray-500 mt-8">
+              This accessibility statement was last updated on {new Date().toLocaleDateString()}.
+            </p>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+</ModernLayout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-bold text-gray-900 mt-6 mb-3;
+  }
+  
+  .prose p {
+    @apply mb-4 text-gray-700;
+  }
+  
+  .prose ul {
+    @apply mb-4 pl-6;
+  }
+  
+  .prose li {
+    @apply mb-2 text-gray-700;
+  }
+</style>

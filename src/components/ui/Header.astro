@@ -1,0 +1,261 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { 
+    name: 'About', 
+    href: '/about',
+    children: [
+      { name: 'Services', href: '/services' },
+      { name: 'Leadership', href: '/leadership' }
+    ]
+  },
+  { 
+    name: 'Ministries', 
+    href: '/ministries',
+    children: [
+      { name: 'Kids Church', href: '/ministries/kids-church' },
+      { name: 'Youth Group', href: '/ministries/youth-group' },
+      { name: 'Bible Bowl', href: '/ministries/bible-bowl' },
+      { name: 'Food Pantry', href: '/ministries/food-pantry' },
+      { name: 'Missions', href: '/ministries/missions' }
+    ]
+  },
+  { name: 'Events', href: '/events' },
+  { name: 'Give', href: '/give' },
+  { name: 'Contact', href: '/contact' }
+];
+
+function isActive(href: string, currentPath?: string) {
+  if (!currentPath) return false;
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+    Skip to main content
+  </a>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 lg:h-20">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-3 group">
+          <img 
+            src="/logos/Logo.jpg" 
+            alt="New Brunswick Church of Christ Logo" 
+            class="h-10 w-10 lg:h-12 lg:w-12 rounded-full object-cover group-hover:scale-105 transition-transform duration-200"
+          />
+          <div class="hidden sm:block">
+            <div class="text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+              NBCC
+            </div>
+            <div class="text-xs text-gray-600 -mt-1">
+              Since 1856
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+        {navigation.map((item) => (
+          <div class="relative group">
+            <a 
+              href={item.href}
+              class={`inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                isActive(item.href, currentPath) 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
+              {item.name}
+              {item.children && (
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              )}
+            </a>
+            
+            {item.children && (
+              <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-20">
+                <div class="py-1">
+                  {item.children.map((child) => (
+                    <a 
+                      href={child.href}
+                      class={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                        isActive(child.href, currentPath) 
+                          ? 'text-blue-600 bg-blue-50' 
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      }`}
+                    >
+                      {child.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden lg:flex items-center space-x-3">
+        <a 
+          href="/prayer-request" 
+          class="inline-flex items-center px-4 py-2 border border-blue-600 text-sm font-medium rounded-md text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white transition-all duration-200"
+        >
+          Prayer Request
+        </a>
+        <a 
+          href="/services" 
+          class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md"
+        >
+          Visit Us
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="mobile-menu-button"
+        class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+      >
+        <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div 
+    id="mobile-menu" 
+    class="lg:hidden fixed inset-0 top-16 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobile navigation menu"
+  >
+    <div class="px-4 py-6 space-y-1 h-full overflow-y-auto">
+      {navigation.map((item) => (
+        <div>
+          <a 
+            href={item.href}
+            class={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-200 ${
+              isActive(item.href, currentPath) 
+                ? 'text-blue-600 bg-blue-50' 
+                : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+            }`}
+          >
+            {item.name}
+          </a>
+          {item.children && (
+            <div class="ml-4 mt-2 space-y-1">
+              {item.children.map((child) => (
+                <a 
+                  href={child.href}
+                  class={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
+                    isActive(child.href, currentPath) 
+                      ? 'text-blue-600 bg-blue-50' 
+                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
+                >
+                  {child.name}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+      
+      <!-- Mobile CTA Buttons -->
+      <div class="pt-6 space-y-3 border-t border-gray-200">
+        <a 
+          href="/prayer-request" 
+          class="block w-full px-4 py-3 text-center border border-blue-600 text-sm font-medium rounded-md text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white transition-all duration-200"
+        >
+          Prayer Request
+        </a>
+        <a 
+          href="/services" 
+          class="block w-full px-4 py-3 text-center border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-all duration-200"
+        >
+          Visit Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div 
+    id="mobile-menu-overlay" 
+    class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-30"
+  ></div>
+</header>
+
+<script>
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  
+  let isMenuOpen = false;
+  
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      // Open menu
+      mobileMenu?.classList.remove('translate-x-full');
+      mobileMenuOverlay?.classList.remove('opacity-0', 'invisible');
+      mobileMenuOverlay?.classList.add('opacity-100', 'visible');
+      menuIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      mobileMenuButton?.setAttribute('aria-expanded', 'true');
+    } else {
+      // Close menu
+      mobileMenu?.classList.add('translate-x-full');
+      mobileMenuOverlay?.classList.add('opacity-0', 'invisible');
+      mobileMenuOverlay?.classList.remove('opacity-100', 'visible');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      document.body.style.overflow = '';
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    }
+  }
+  
+  function closeMobileMenu() {
+    if (isMenuOpen) {
+      toggleMobileMenu();
+    }
+  }
+  
+  // Event listeners
+  mobileMenuButton?.addEventListener('click', toggleMobileMenu);
+  mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+  
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+  
+  // Close menu on navigation
+  document.addEventListener('astro:page-load', closeMobileMenu);
+</script>

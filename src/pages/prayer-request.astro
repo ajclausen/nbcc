@@ -1,0 +1,373 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../components/animations/ScrollReveal.tsx';
+---
+
+<ModernLayout title="Prayer Request - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-purple-900 to-purple-700 text-white py-20">
+		<div class="absolute inset-0 overflow-hidden">
+			<div class="absolute -top-40 -right-40 w-80 h-80 bg-purple-600 rounded-full opacity-20"></div>
+			<div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-800 rounded-full opacity-20"></div>
+		</div>
+		<div class="relative container mx-auto px-4 text-center">
+			<FadeIn client:visible>
+				<h1 class="text-5xl md:text-6xl font-bold mb-6">Prayer Requests</h1>
+				<p class="text-2xl text-purple-100 max-w-3xl mx-auto">
+					Share your burdens and let us lift you up in prayer
+				</p>
+				<blockquote class="mt-8 text-lg text-purple-200 italic max-w-2xl mx-auto">
+					"Therefore confess your sins to each other and pray for each other so that you may be healed. 
+					The prayer of a righteous person is powerful and effective."
+					<cite class="block mt-2 text-purple-300 not-italic">- James 5:16</cite>
+				</blockquote>
+			</FadeIn>
+		</div>
+	</section>
+
+	<!-- Prayer Request Form Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">How Can We Pray for You?</h2>
+						<p class="text-xl text-gray-600">
+							Our prayer team and congregation are committed to lifting up your needs before the Lord.
+							Your request will be handled with care and confidentiality.
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid lg:grid-cols-3 gap-8 mb-12">
+					<AnimatedCard client:visible>
+						<div class="text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Confidential</h3>
+							<p class="text-gray-600">
+								Your prayer requests are kept confidential and only shared with our prayer team
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Prayer Team</h3>
+							<p class="text-gray-600">
+								Dedicated prayer warriors committed to interceding on your behalf
+							</p>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="text-center">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">Weekly Prayer</h3>
+							<p class="text-gray-600">
+								Requests are prayed over during our Wednesday evening prayer service
+							</p>
+						</div>
+					</AnimatedCard>
+				</div>
+
+				<FadeIn client:visible>
+					<form class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-8 space-y-6">
+						<div class="grid md:grid-cols-2 gap-6">
+							<div>
+								<label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+									First Name <span class="text-red-500">*</span>
+								</label>
+								<input
+									type="text"
+									id="firstName"
+									name="firstName"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+									required
+								/>
+							</div>
+							<div>
+								<label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+									Last Name
+								</label>
+								<input
+									type="text"
+									id="lastName"
+									name="lastName"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+								Email
+							</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+								placeholder="Optional - if you'd like us to follow up"
+							/>
+						</div>
+
+						<div>
+							<label for="requestType" class="block text-sm font-medium text-gray-700 mb-2">
+								Type of Request
+							</label>
+							<select
+								id="requestType"
+								name="requestType"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+							>
+								<option value="healing">Healing & Health</option>
+								<option value="family">Family & Relationships</option>
+								<option value="spiritual">Spiritual Growth</option>
+								<option value="guidance">Guidance & Wisdom</option>
+								<option value="thanksgiving">Thanksgiving & Praise</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+
+						<div>
+							<label for="request" class="block text-sm font-medium text-gray-700 mb-2">
+								Prayer Request <span class="text-red-500">*</span>
+							</label>
+							<textarea
+								id="request"
+								name="request"
+								rows="6"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors resize-none"
+								placeholder="Please share your prayer request here..."
+								required
+							></textarea>
+						</div>
+
+						<div>
+							<label class="flex items-start">
+								<input
+									type="checkbox"
+									name="shareWithChurch"
+									class="mt-1 mr-3 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+								/>
+								<span class="text-sm text-gray-700">
+									You may share this request with the congregation during our prayer time 
+									(your last name will not be shared)
+								</span>
+							</label>
+						</div>
+
+						<div>
+							<label class="flex items-start">
+								<input
+									type="checkbox"
+									name="contactMe"
+									class="mt-1 mr-3 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+								/>
+								<span class="text-sm text-gray-700">
+									I would like someone from the pastoral team to contact me about this request
+								</span>
+							</label>
+						</div>
+
+						<button
+							type="submit"
+							class="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-[1.02]"
+						>
+							Submit Prayer Request
+						</button>
+
+						<p class="text-sm text-gray-500 text-center">
+							All prayer requests are treated with respect and confidentiality.
+						</p>
+					</form>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Other Ways to Connect -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Other Ways We Can Support You</h2>
+						<p class="text-xl text-gray-600">
+							Beyond prayer, we're here to walk alongside you
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Pastoral Care</h3>
+								<p class="text-gray-600 mb-4">
+									Our pastoral team is available for counseling, hospital visits, and spiritual guidance.
+								</p>
+								<a href="/contact" class="text-purple-600 font-semibold hover:text-purple-700">
+									Contact us →
+								</a>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Prayer Chain</h3>
+								<p class="text-gray-600 mb-4">
+									Join our prayer chain to receive urgent prayer requests and pray for others in need.
+								</p>
+								<a href="/contact" class="text-purple-600 font-semibold hover:text-purple-700">
+									Join the chain →
+								</a>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Practical Support</h3>
+								<p class="text-gray-600 mb-4">
+									From meals during difficult times to assistance through our food pantry, we're here to help.
+								</p>
+								<a href="/ministries/food-pantry" class="text-purple-600 font-semibold hover:text-purple-700">
+									Learn more →
+								</a>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Prayer Resources -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Prayer Resources</h2>
+						<p class="text-xl text-gray-600">Tools to help you grow in your prayer life</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Wednesday Prayer Service</h3>
+							<p class="text-gray-700 mb-4">
+								Join us every Wednesday at 7:00 PM for our midweek prayer service. It's a time of 
+								worship, prayer, and encouragement as we lift up the needs of our church family and community.
+							</p>
+							<div class="bg-white rounded-lg p-4">
+								<p class="text-sm text-gray-600">
+									<strong>When:</strong> Wednesdays, 7:00 PM<br />
+									<strong>Where:</strong> NBCC Sanctuary<br />
+									<strong>Format:</strong> Worship, prayer time, and devotional
+								</p>
+							</div>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Prayer Guidelines</h3>
+							<p class="text-gray-700 mb-4">
+								Not sure how to pray? Remember the ACTS model:
+							</p>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="font-bold text-purple-600 mr-2">A</span>
+									<span><strong>Adoration</strong> - Praise God for who He is</span>
+								</li>
+								<li class="flex items-start">
+									<span class="font-bold text-purple-600 mr-2">C</span>
+									<span><strong>Confession</strong> - Acknowledge your sins</span>
+								</li>
+								<li class="flex items-start">
+									<span class="font-bold text-purple-600 mr-2">T</span>
+									<span><strong>Thanksgiving</strong> - Thank God for His blessings</span>
+								</li>
+								<li class="flex items-start">
+									<span class="font-bold text-purple-600 mr-2">S</span>
+									<span><strong>Supplication</strong> - Present your requests</span>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">You're Not Alone</h2>
+					<p class="text-xl mb-10 text-purple-100">
+						Whatever you're facing, remember that God hears your prayers and our church family 
+						is here to support you. Don't carry your burdens alone.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="bg-purple-700/50 backdrop-blur-sm rounded-lg p-8 mb-8">
+						<blockquote class="text-lg text-purple-100 italic">
+							"Cast all your anxiety on him because he cares for you."
+						</blockquote>
+						<cite class="text-purple-200 text-sm">- 1 Peter 5:7</cite>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/services" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Join Us for Worship
+						</a>
+						<a href="/contact" class="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-purple-600">
+							Talk to Someone
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

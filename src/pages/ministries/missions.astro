@@ -1,0 +1,492 @@
+---
+import ModernLayout from '../../layouts/ModernLayout.astro';
+import FadeIn from '../../components/animations/FadeIn.tsx';
+import AnimatedCard from '../../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Missions - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2940" 
+					alt="Global missions" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-green-900/90 to-blue-900/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Missions</h1>
+					<p class="text-2xl text-blue-100 max-w-3xl mx-auto">
+						Taking the Gospel to our community and the ends of the earth
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Mission Vision -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">The Great Commission in Action</h2>
+						<div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8 max-w-3xl mx-auto">
+							<blockquote class="text-xl text-gray-700 italic mb-4">
+								"Therefore go and make disciples of all nations, baptizing them in the name of the Father 
+								and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you."
+							</blockquote>
+							<cite class="text-gray-600">- Matthew 28:19-20</cite>
+						</div>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission Heart</h3>
+							<p class="text-lg text-gray-600 mb-6">
+								At NBCC, we believe that sharing the Gospel isn't just something we do—it's who we are. 
+								Led by our Missions Director Lisa Slater, we're committed to supporting missionaries, 
+								partnering with mission organizations, and actively participating in both local and 
+								global outreach efforts.
+							</p>
+							<p class="text-lg text-gray-600 mb-6">
+								From our own backyard in Lebanon to the far corners of the earth, we're dedicated to 
+								sharing God's love through word and deed, meeting both spiritual and physical needs 
+								in Jesus' name.
+							</p>
+							<a href="/contact" class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors group">
+								Connect with our missions team
+								<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+								</svg>
+							</a>
+						</div>
+					</FadeIn>
+					
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2874" 
+								alt="Mission work" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -right-8 bg-gradient-to-br from-green-600 to-blue-600 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-lg font-semibold mb-2">Mission Focus</p>
+								<p class="text-blue-100">Local • National • Global</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Missions -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Local Missions</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Being the hands and feet of Jesus in Boone County and beyond
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Food Pantry Ministry</h3>
+								<p class="text-gray-600">
+									Serving hundreds of families monthly with groceries and essentials, showing Christ's love 
+									through practical care.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Homeless Ministry</h3>
+								<p class="text-gray-600">
+									Our youth and adults regularly serve the homeless community, providing meals, 
+									clothing, and sharing the hope of Christ.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Community Outreach</h3>
+								<p class="text-gray-600">
+									From Trunk or Treat to VBS, we create opportunities to connect with our neighbors 
+									and share God's love in tangible ways.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Nursing Home Ministry</h3>
+								<p class="text-gray-600">
+									Regular visits to local nursing homes for worship services, communion, 
+									and fellowship with residents.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.4}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Benevolence Ministry</h3>
+								<p class="text-gray-600">
+									Helping families in crisis with financial assistance, counseling, and practical support 
+									during difficult times.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.5}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 00-2-2H8a2 2 0 00-2 2v2m6 0V6a2 2 0 012-2h2a2 2 0 012 2v2m-6 0h6a2 2 0 012 2v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2a2 2 0 012-2h6m0 8v2m0-2v4a2 2 0 01-2 2h-4a2 2 0 01-2-2v-4m6 0H8"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Holiday Outreach</h3>
+								<p class="text-gray-600">
+									Christmas dinners, Easter celebrations, and seasonal assistance to ensure 
+									no family goes without during the holidays.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Global Missions -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Global Mission Partnerships</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Supporting missionaries and organizations spreading the Gospel worldwide
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8">
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">Our Global Impact</h3>
+							<p class="text-gray-700 mb-6">
+								Through strategic partnerships with missionaries and mission organizations, 
+								we're helping to spread the Gospel in countries around the world. Our support includes:
+							</p>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-700">Financial support for missionaries and their families</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-700">Short-term mission trip opportunities</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-700">Prayer support and encouragement</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+									<span class="text-gray-700">Resources for church planting and education</span>
+								</li>
+							</ul>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=2940" 
+								alt="Global missions" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-green-900/20 rounded-lg"></div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Youth Mission Trips -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Youth Mission Trips</h2>
+						<p class="text-xl text-gray-600">
+							Training the next generation of missionaries through hands-on experience
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<FadeIn client:visible>
+					<div class="bg-white rounded-lg p-8 shadow-xl">
+						<div class="grid md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-4">Annual Mission Experience</h3>
+								<p class="text-gray-700 mb-4">
+									Each year, our youth group participates in mission trips that combine service, 
+									evangelism, and spiritual growth. These trips help students:
+								</p>
+								<ul class="space-y-2">
+									<li class="flex items-center text-gray-700">
+										<svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										</svg>
+										Develop a heart for missions
+									</li>
+									<li class="flex items-center text-gray-700">
+										<svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										</svg>
+										Experience different cultures
+									</li>
+									<li class="flex items-center text-gray-700">
+										<svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										</svg>
+										Share their faith boldly
+									</li>
+									<li class="flex items-center text-gray-700">
+										<svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										</svg>
+										Serve communities in need
+									</li>
+								</ul>
+							</div>
+							<div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-6 text-center">
+								<div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h4 class="text-xl font-bold text-gray-900 mb-2">Next Mission Trip</h4>
+								<p class="text-gray-700">
+									Contact our youth leaders for information about upcoming mission opportunities
+								</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Get Involved -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">How You Can Get Involved</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							There are many ways to participate in God's mission through NBCC
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Pray</h3>
+							<p class="text-gray-600 mb-4">
+								Join our missions prayer team to intercede for missionaries, mission fields, 
+								and the spread of the Gospel.
+							</p>
+							<a href="/prayer-request" class="text-blue-600 font-semibold hover:text-blue-700">
+								Join prayer team →
+							</a>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Give</h3>
+							<p class="text-gray-600 mb-4">
+								Support missions financially through regular giving or special offerings 
+								for specific mission projects.
+							</p>
+							<a href="/give" class="text-green-600 font-semibold hover:text-green-700">
+								Support missions →
+							</a>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="text-center">
+							<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Go</h3>
+							<p class="text-gray-600 mb-4">
+								Participate in local outreach, join a mission trip, or consider long-term 
+								missionary service.
+							</p>
+							<a href="/contact" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+								Get involved →
+							</a>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission Leader -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Meet Our Missions Director</h2>
+					</div>
+				</ScrollReveal>
+
+				<FadeIn client:visible>
+					<div class="bg-white rounded-lg p-8 shadow-xl">
+						<div class="flex flex-col md:flex-row items-center gap-8">
+							<img 
+								src="/logos/JohnClausen.jpg" 
+								alt="John Clausen" 
+								class="w-40 h-40 rounded-full object-cover"
+							/>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900 mb-2">John Clausen</h3>
+								<p class="text-blue-600 font-medium mb-4">Elder & Missions Director</p>
+								<p class="text-gray-700 mb-4">
+									John's heart for missions drives our church's outreach efforts both locally and globally. 
+									With years of experience in mission work and a passion for serving others, he helps 
+									coordinate our various mission initiatives and connects our congregation with opportunities 
+									to make a difference for Christ.
+								</p>
+								<a href="/contact" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+									Contact John about missions
+									<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Be Part of God's Mission</h2>
+					<p class="text-xl mb-10 text-blue-100">
+						The harvest is plentiful, but the workers are few. Will you answer the call 
+						to share God's love with a world in need?
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="bg-blue-700/30 backdrop-blur-sm rounded-lg p-8 mb-8">
+						<blockquote class="text-lg text-white italic mb-4">
+							"How, then, can they call on the one they have not believed in? And how can they 
+							believe in the one of whom they have not heard? And how can they hear without 
+							someone preaching to them?"
+						</blockquote>
+						<cite class="text-blue-200 text-sm">- Romans 10:14</cite>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Get Involved in Missions
+						</a>
+						<a href="/give" class="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-green-600">
+							Support Our Missionaries
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

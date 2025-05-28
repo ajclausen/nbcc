@@ -30,13 +30,13 @@ const services = [
 ];
 
 const colorClasses = {
-  blue: 'bg-blue-50 text-blue-600',
-  purple: 'bg-purple-50 text-purple-600'
+  blue: 'bg-primary/10 text-primary',
+  purple: 'bg-accent-purple/10 text-accent-purple'
 };
 
 export default function ModernServiceTimes() {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export default function ModernServiceTimes() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="heading-lg text-gray-900 mb-4">Join Us This Week</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-4">Join Us This Week</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We gather to worship, learn, and grow together. Everyone is welcome.
           </p>
@@ -58,7 +58,7 @@ export default function ModernServiceTimes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="card-modern p-8"
+              className="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out p-8"
             >
               <div className="flex items-center mb-6">
                 <div className={`p-3 rounded-lg ${colorClasses[service.color]}`}>

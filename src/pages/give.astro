@@ -1,0 +1,368 @@
+---
+import ModernLayout from '../layouts/ModernLayout.astro';
+import FadeIn from '../components/animations/FadeIn.tsx';
+import AnimatedCard from '../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Give - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2940" 
+					alt="Giving hands" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-700/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Generosity Changes Lives</h1>
+					<p class="text-2xl text-blue-100 max-w-3xl mx-auto">
+						Your faithful giving helps us share God's love in our community and beyond
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Biblical Foundation -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Why We Give</h2>
+						<div class="bg-blue-50 rounded-lg p-8 mb-8">
+							<blockquote class="text-xl italic text-gray-700 mb-4">
+								"But seek the place the Lord your God will choose from among all your tribes to put his Name there 
+								for his dwelling. To that place you must go; there bring your burnt offerings and sacrifices, 
+								your tithes and special gifts, what you have vowed to give and your freewill offerings..."
+							</blockquote>
+							<cite class="text-gray-600 font-medium">- Deuteronomy 12:5-6</cite>
+						</div>
+						<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+							Giving is an act of worship and obedience that reflects our gratitude to God. 
+							Through your generosity, we're able to support ministries, maintain our facilities, 
+							serve our community, and spread the Gospel worldwide.
+						</p>
+					</div>
+				</ScrollReveal>
+			</div>
+		</div>
+	</section>
+
+	<!-- Ways to Give -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Ways to Give</h2>
+						<p class="text-xl text-gray-600">Choose the giving method that works best for you</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8 mb-12">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300 group">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Online Giving</h3>
+								<p class="text-gray-600 mb-6">
+									Give securely online through Givelify. Set up one-time or recurring gifts with ease.
+								</p>
+								<a 
+									href="https://www.givelify.com" 
+									target="_blank" 
+									rel="noopener noreferrer"
+									class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg"
+								>
+									Give Online Now
+									<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+									</svg>
+								</a>
+								<p class="text-sm text-gray-500 mt-3 text-center">Powered by Givelify</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300 group">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Sunday Offering</h3>
+								<p class="text-gray-600 mb-6">
+									Place your gift in the offering during our Sunday worship service at 10:00 AM.
+								</p>
+								<div class="bg-gray-50 rounded-lg p-4">
+									<p class="text-sm text-gray-600">
+										<strong>Service Times:</strong><br />
+										Sunday School: 9:00 AM<br />
+										Sunday Worship: 10:00 AM
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300 group">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Mail a Check</h3>
+								<p class="text-gray-600 mb-6">
+									Send your gift by mail to our church office. Make checks payable to NBCC.
+								</p>
+								<div class="bg-gray-50 rounded-lg p-4">
+									<p class="text-sm text-gray-600">
+										<strong>Mailing Address:</strong><br />
+										New Brunswick Church of Christ<br />
+										6480 S State Road 39<br />
+										Lebanon, IN 46052
+									</p>
+								</div>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+
+				<!-- Security Notice -->
+				<FadeIn client:visible>
+					<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-3xl mx-auto">
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+							</svg>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Your Security is Our Priority</h4>
+								<p class="text-gray-600">
+									All online transactions are encrypted and secure. We never store your payment information, 
+									and we respect your privacy. Your giving information is kept strictly confidential.
+								</p>
+							</div>
+						</div>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Impact Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Your Impact</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							Every gift makes a difference. Here's how your generosity impacts lives:
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div class="space-y-6">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Local Ministries</h3>
+									<p class="text-gray-600">Supporting our Kids Church, Youth Group, Bible Bowl, and community outreach programs</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Global Missions</h3>
+									<p class="text-gray-600">Partnering with missionaries and organizations to share the Gospel worldwide</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Community Care</h3>
+									<p class="text-gray-600">Operating our food pantry, providing assistance to families in need, and serving our neighbors</p>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div class="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-bold text-gray-900 mb-2">Facility & Resources</h3>
+									<p class="text-gray-600">Maintaining a welcoming space for worship, fellowship, and community events</p>
+								</div>
+							</div>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2940" 
+								alt="Community service" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -right-8 bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-lg shadow-xl">
+								<blockquote class="text-lg font-medium mb-2">
+									"One gives freely, yet grows all the richer"
+								</blockquote>
+								<cite class="text-blue-200 text-sm">- Proverbs 11:24</cite>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-3xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Frequently Asked Questions</h2>
+					</div>
+				</ScrollReveal>
+
+				<div class="space-y-6">
+					<AnimatedCard client:visible>
+						<details class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 group">
+							<summary class="flex justify-between items-center cursor-pointer list-none">
+								<h3 class="text-lg font-bold text-gray-900">Is my donation tax-deductible?</h3>
+								<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Yes! New Brunswick Church of Christ is a registered 501(c)(3) non-profit organization. 
+								All donations are tax-deductible to the fullest extent allowed by law. You'll receive 
+								a year-end giving statement for your tax records.
+							</p>
+						</details>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<details class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 group">
+							<summary class="flex justify-between items-center cursor-pointer list-none">
+								<h3 class="text-lg font-bold text-gray-900">Can I set up recurring donations?</h3>
+								<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Absolutely! Through Givelify, you can easily set up weekly, bi-weekly, or monthly 
+								recurring donations. This is a great way to ensure consistent support for our ministries 
+								and helps us plan more effectively.
+							</p>
+						</details>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<details class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 group">
+							<summary class="flex justify-between items-center cursor-pointer list-none">
+								<h3 class="text-lg font-bold text-gray-900">How is my donation used?</h3>
+								<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								We are committed to being good stewards of your gifts. Donations support our ministries, 
+								staff, facility maintenance, community outreach, and missions. We maintain transparency 
+								in our financial practices and provide regular updates to our congregation.
+							</p>
+						</details>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<details class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 p-6 group">
+							<summary class="flex justify-between items-center cursor-pointer list-none">
+								<h3 class="text-lg font-bold text-gray-900">Can I designate my gift for a specific purpose?</h3>
+								<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Yes, you can designate your gift for specific ministries or purposes. When giving online, 
+								you'll have the option to select a fund. For checks, simply write the designation in the 
+								memo line. We'll ensure your gift is used according to your wishes.
+							</p>
+						</details>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Partner With Us in Ministry</h2>
+					<p class="text-xl mb-10 text-blue-100">
+						Your generosity enables us to continue sharing God's love and making disciples. 
+						Thank you for considering a gift to New Brunswick Church of Christ.
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a 
+							href="https://www.givelify.com" 
+							target="_blank" 
+							rel="noopener noreferrer"
+							class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg"
+						>
+							Give Now
+						</a>
+						<a href="/contact" class="bg-transparent text-white px-8 py-3 rounded-lg border-2 border-white font-semibold transition-all duration-200 inline-block hover:bg-white hover:text-blue-600">
+							Contact Us
+						</a>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<p class="mt-8 text-sm text-blue-200">
+						Questions about giving? Call us at (765) 482-5265 or email office@nbcc-church.org
+					</p>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>

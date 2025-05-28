@@ -1,0 +1,307 @@
+---
+import ModernLayout from '../../layouts/ModernLayout.astro';
+import FadeIn from '../../components/animations/FadeIn.tsx';
+import AnimatedCard from '../../components/animations/AnimatedCard.tsx';
+import ScrollReveal from '../../components/animations/ScrollReveal.tsx';
+import ParallaxSection from '../../components/animations/ParallaxSection.tsx';
+---
+
+<ModernLayout title="Youth Group - New Brunswick Church of Christ">
+	<!-- Hero Section -->
+	<ParallaxSection client:load>
+		<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 z-0">
+				<img 
+					src="/logos/Youthgroup.jpg" 
+					alt="Youth Group" 
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-purple-700/80"></div>
+			</div>
+			<div class="relative z-10 container mx-auto px-4 text-center">
+				<FadeIn client:visible>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Youth Group</h1>
+					<p class="text-2xl text-purple-100 max-w-3xl mx-auto">
+						Building faith, friendships, and fun for middle & high school students
+					</p>
+				</FadeIn>
+			</div>
+		</section>
+	</ParallaxSection>
+
+	<!-- Overview Section -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<FadeIn client:visible>
+						<div>
+							<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Growing Together in Faith</h2>
+							<p class="text-lg text-gray-600 mb-6">
+								Our youth group is a vibrant community where middle and high school students can explore their faith, 
+								build lasting friendships, and have a blast while growing closer to God. We meet every Sunday evening 
+								from 6:00-7:30 PM (August through May) for games, worship, and relevant biblical teaching.
+							</p>
+							<div class="bg-purple-50 rounded-lg p-6 mb-6">
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Meeting Times</h3>
+								<p class="text-gray-700">
+									<strong>When:</strong> Sunday Evenings, 6:00-7:30 PM<br />
+									<strong>Where:</strong> NBCC Youth Room<br />
+									<strong>Who:</strong> All students grades 6-12<br />
+									<strong>Season:</strong> August through May
+								</p>
+							</div>
+							<a href="/contact" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors group">
+								Join us this Sunday!
+								<svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+								</svg>
+							</a>
+						</div>
+					</FadeIn>
+					
+					<FadeIn client:visible delay={0.2}>
+						<div class="relative">
+							<img 
+								src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2940" 
+								alt="Youth group activities" 
+								class="rounded-lg shadow-2xl"
+							/>
+							<div class="absolute -bottom-8 -left-8 bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 rounded-lg shadow-xl">
+								<p class="text-3xl font-bold">50+</p>
+								<p class="text-purple-100">Active Youth Members</p>
+							</div>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Activities & Programs -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">What We Do</h2>
+						<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+							From worship to service, our youth experience faith in action
+						</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<AnimatedCard client:visible>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Ablaze Worship Band</h3>
+								<p class="text-gray-600">
+									Our teen worship band leads dynamic worship experiences and performs at special events.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.1}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">ICYC & Summer Camp</h3>
+								<p class="text-gray-600">
+									Annual trips to Indiana Christian Youth Conference and week-long summer camp at Hanging Rock.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.2}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Bible Bowl</h3>
+								<p class="text-gray-600">
+									Competitive Bible study that makes learning Scripture fun and helps earn college scholarships.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.3}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Mission Trips</h3>
+								<p class="text-gray-600">
+									Annual mission trips to serve communities and share God's love through practical service.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.4}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Community Service</h3>
+								<p class="text-gray-600">
+									Regular service projects including homeless ministry, food pantry support, and seasonal outreach.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+
+					<AnimatedCard client:visible delay={0.5}>
+						<div class="bg-white rounded-2xl shadow-card transition-all duration-300 ease-in-out hover:shadow-card-hover hover:-translate-y-0.5 h-full hover:shadow-2xl transition-all duration-300">
+							<div class="p-8">
+								<div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mb-6">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Fun & Fellowship</h3>
+								<p class="text-gray-600">
+									Fall retreats with horseback riding, game nights, movie marathons, and special holiday parties.
+								</p>
+							</div>
+						</div>
+					</AnimatedCard>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Recent Highlights -->
+	<section class="py-12 md:py-16 lg:py-20 bg-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				<ScrollReveal client:visible>
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Recent Highlights</h2>
+						<p class="text-xl text-gray-600">See what our youth have been up to!</p>
+					</div>
+				</ScrollReveal>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<FadeIn client:visible>
+						<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">2022 Fall Retreat</h3>
+							<p class="text-gray-700">
+								An amazing weekend at camp featuring horseback riding, zip-lining, games, worship, 
+								and powerful messages about living for Christ.
+							</p>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.1}>
+						<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Trunk or Treat Success</h3>
+							<p class="text-gray-700">
+								Our youth helped host over 200 community kids for our annual Trunk or Treat event, 
+								sharing God's love through fun and fellowship.
+							</p>
+						</div>
+					</FadeIn>
+
+					<FadeIn client:visible delay={0.2}>
+						<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">Christmas Outreach</h3>
+							<p class="text-gray-700">
+								Delivered Christmas dinners to families in need and caroled at local nursing homes, 
+								spreading joy and hope during the holiday season.
+							</p>
+						</div>
+					</FadeIn>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Youth Leaders -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<ScrollReveal client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900 mb-6">Led by Caring Adults</h2>
+					<p class="text-xl text-gray-600 mb-12">
+						Our youth leaders are passionate about helping students grow in their faith 
+						and navigate the challenges of teenage life with Christ at the center.
+					</p>
+				</ScrollReveal>
+
+				<FadeIn client:visible>
+					<div class="bg-white rounded-lg p-8 shadow-xl">
+						<p class="text-lg text-gray-700 mb-6">
+							Our youth ministry team includes dedicated volunteers who mentor, teach, and walk alongside 
+							our students. They're committed to creating a safe, fun environment where teens can ask 
+							honest questions, build authentic friendships, and grow in their relationship with Jesus.
+						</p>
+						<a href="/contact" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Contact our youth leaders
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+							</svg>
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto text-center">
+				<FadeIn client:visible>
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6">Join the Journey</h2>
+					<p class="text-xl mb-10 text-purple-100">
+						Whether you're new to faith or have been following Jesus for years, 
+						you'll find a place to belong in our youth group. Come as you are!
+					</p>
+				</FadeIn>
+				
+				<FadeIn client:visible delay={0.2}>
+					<div class="bg-purple-800/50 backdrop-blur-sm rounded-lg p-8 mb-8">
+						<h3 class="text-2xl font-bold mb-4">Next Meeting</h3>
+						<p class="text-lg text-purple-100">
+							This Sunday, 6:00-7:30 PM<br />
+							NBCC Youth Room
+						</p>
+					</div>
+				</FadeIn>
+
+				<FadeIn client:visible delay={0.3}>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 inline-block hover:bg-gray-100 hover:-translate-y-px hover:shadow-lg">
+							Get Connected
+						</a>
+						<a href="/events" class="bg-transparent text-primary px-8 py-3 rounded-lg border-2 border-primary font-semibold transition-all duration-200 inline-block hover:bg-primary hover:text-white border-white text-white hover:bg-white hover:text-purple-600">
+							View Upcoming Events
+						</a>
+					</div>
+				</FadeIn>
+			</div>
+		</div>
+	</section>
+</ModernLayout>
